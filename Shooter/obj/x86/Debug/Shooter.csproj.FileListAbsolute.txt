@@ -28,3 +28,4 @@ C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\
 C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Images\MegaLazer.xnb
 C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Images\laserstrip.xnb
 C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Images\LaserRage.xnb
+C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Images\weak lazer.xnb

@@ -8,7 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Images\bgLayer1.xnb</Output>
-      <Time>2015-05-11T08:22:48.1434643-06:00</Time>
+      <Time>2015-05-19T08:13:59.0602667-06:00</Time>
     </Item>
     <Item>
       <Source>Images\bgLayer2.png</Source>
@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Images\bgLayer2.xnb</Output>
-      <Time>2015-05-11T08:22:48.2114711-06:00</Time>
+      <Time>2015-05-19T08:13:59.0758668-06:00</Time>
     </Item>
     <Item>
       <Source>Images\endMenu.png</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Images\endMenu.xnb</Output>
-      <Time>2015-05-11T08:22:48.2564756-06:00</Time>
+      <Time>2015-05-21T08:31:47.9513523-06:00</Time>
     </Item>
     <Item>
       <Source>Images\explosion.png</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Images\explosion.xnb</Output>
-      <Time>2015-05-11T08:22:48.3294829-06:00</Time>
+      <Time>2015-05-19T08:13:59.1226671-06:00</Time>
     </Item>
     <Item>
       <Source>Images\laser.png</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Images\laser.xnb</Output>
-      <Time>2015-05-11T08:22:48.3574857-06:00</Time>
+      <Time>2015-05-19T08:13:59.1382672-06:00</Time>
     </Item>
     <Item>
       <Source>Images\mainbackground.png</Source>
@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Images\mainbackground.xnb</Output>
-      <Time>2015-05-11T08:22:48.3724872-06:00</Time>
+      <Time>2015-05-19T08:13:59.1850675-06:00</Time>
     </Item>
     <Item>
       <Source>Images\mainMenu.png</Source>
@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Images\mainMenu.xnb</Output>
-      <Time>2015-05-11T08:22:48.5485048-06:00</Time>
+      <Time>2015-05-19T08:13:59.2162677-06:00</Time>
     </Item>
     <Item>
       <Source>Images\mine.png</Source>
@@ -71,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Images\mine.xnb</Output>
-      <Time>2015-05-11T08:22:48.5595059-06:00</Time>
+      <Time>2015-05-19T08:13:59.2474679-06:00</Time>
     </Item>
     <Item>
       <Source>Images\mineAnimation.png</Source>
@@ -80,7 +80,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Images\mineAnimation.xnb</Output>
-      <Time>2015-05-11T08:22:48.570507-06:00</Time>
+      <Time>2015-05-19T08:13:59.263068-06:00</Time>
     </Item>
     <Item>
       <Source>Images\player.png</Source>
@@ -89,7 +89,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Images\player.xnb</Output>
-      <Time>2015-05-11T08:22:48.5825082-06:00</Time>
+      <Time>2015-05-19T08:13:59.2786681-06:00</Time>
     </Item>
     <Item>
       <Source>Images\shipAnimation.png</Source>
@@ -98,7 +98,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Images\shipAnimation.xnb</Output>
-      <Time>2015-05-11T08:22:48.620512-06:00</Time>
+      <Time>2015-05-19T08:13:59.2942682-06:00</Time>
     </Item>
     <Item>
       <Source>Sounds\explosion.wav</Source>
@@ -107,7 +107,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Sounds\explosion.xnb</Output>
-      <Time>2015-05-11T08:22:48.720522-06:00</Time>
+      <Time>2015-05-19T08:13:59.4814694-06:00</Time>
     </Item>
     <Item>
       <Source>Sounds\laserFire.wav</Source>
@@ -116,7 +116,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Sounds\laserFire.xnb</Output>
-      <Time>2015-05-11T08:22:49.3403795-06:00</Time>
+      <Time>2015-05-19T08:13:59.5594699-06:00</Time>
     </Item>
     <Item>
       <Source>Sounds\gameMusic.mp3</Source>
@@ -126,7 +126,7 @@
       <Options>None</Options>
       <Output>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Sounds\gameMusic.xnb</Output>
       <Extra>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Sounds\gameMusic.wma</Extra>
-      <Time>2015-05-11T08:22:49.3247785-06:00</Time>
+      <Time>2015-05-19T08:13:59.5438698-06:00</Time>
     </Item>
     <Item>
       <Source>Sounds\menuMusic.mp3</Source>
@@ -136,7 +136,7 @@
       <Options>None</Options>
       <Output>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Sounds\menuMusic.xnb</Output>
       <Extra>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Sounds\menuMusic.wma</Extra>
-      <Time>2015-05-11T08:22:49.4495865-06:00</Time>
+      <Time>2015-05-19T08:13:59.5906701-06:00</Time>
     </Item>
     <Item>
       <Source>Fonts\gameFont.spritefont</Source>
@@ -145,7 +145,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Fonts\gameFont.xnb</Output>
-      <Time>2015-05-11T08:22:48.3454845-06:00</Time>
+      <Time>2015-05-19T08:13:59.0290665-06:00</Time>
     </Item>
     <Item>
       <Source>Sounds\SkyFight.mp3</Source>
@@ -155,7 +155,7 @@
       <Options>None</Options>
       <Output>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Sounds\SkyFight.xnb</Output>
       <Extra>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Sounds\SkyFight.wma</Extra>
-      <Time>2015-05-15T07:43:23.4523124-06:00</Time>
+      <Time>2015-05-19T08:13:59.6530705-06:00</Time>
     </Item>
     <Item>
       <Source>Images\Sprite.png</Source>
@@ -164,7 +164,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Images\Sprite.xnb</Output>
-      <Time>2015-05-15T08:26:01.3808026-06:00</Time>
+      <Time>2015-05-19T08:13:59.3098683-06:00</Time>
     </Item>
     <Item>
       <Source>Images\MegaLazer.png</Source>
@@ -173,7 +173,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Images\MegaLazer.xnb</Output>
-      <Time>2015-05-15T09:37:26.4886356-06:00</Time>
+      <Time>2015-05-19T08:13:59.2474679-06:00</Time>
     </Item>
     <Item>
       <Source>Images\laserstrip.png</Source>
@@ -182,7 +182,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Images\laserstrip.xnb</Output>
-      <Time>2015-05-15T09:26:42.9701088-06:00</Time>
+      <Time>2015-05-19T08:13:59.1538673-06:00</Time>
     </Item>
     <Item>
       <Source>Images\LaserRage.png</Source>
@@ -191,7 +191,16 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Images\LaserRage.xnb</Output>
-      <Time>2015-05-15T09:51:40.6877645-06:00</Time>
+      <Time>2015-05-19T08:13:59.1382672-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\weak lazer.png</Source>
+      <Name>Images\weak lazer</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Images\weak lazer.xnb</Output>
+      <Time>2015-05-21T08:57:29.0146091-06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

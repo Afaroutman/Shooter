@@ -22,3 +22,4 @@ Content\Images\Sprite.xnb
 Content\Images\MegaLazer.xnb
 Content\Images\laserstrip.xnb
 Content\Images\LaserRage.xnb
+Content\Images\weak lazer.xnb

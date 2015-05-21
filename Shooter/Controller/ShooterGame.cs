@@ -38,6 +38,7 @@ namespace Shooter.Controller
         Texture2D mainBackground;
         Texture2D explosionTexture;
         List<Animation> explosions;
+        Texture2D endMenu;
 
         SoundEffect laserSound;
         SoundEffect explosionSound;
@@ -104,7 +105,7 @@ namespace Shooter.Controller
             font = Content.Load<SpriteFont>("Fonts/gameFont");
 
             projectileTexture = Content.Load<Texture2D>("Images/laser");
-
+            endMenu = Content.Load<Texture2D>("Images/endMenu");
           
 
             mainBackground = Content.Load<Texture2D>("Images/mainbackground");
@@ -211,6 +212,10 @@ namespace Shooter.Controller
             currentGamePadState = GamePad.GetState(PlayerIndex.One);
             bgLayer1.Update();
             bgLayer2.Update();
+            UpdateEnemies(gameTime);
+            UpdateCollisioin();
+            UpdateProjectiles();
+            UpdateExplosions(gameTime);
 
             UpdatePlayer(gameTime);
 
@@ -270,13 +275,27 @@ namespace Shooter.Controller
                         enemies[j].Health -= projectiles[i].Damage;
                         projectiles[i].Active = false;
                     }
+                   
+                    if (player.Health >= 70)
+                    {
+                        projectileTexture = Content.Load<Texture2D>("Images/laser");
+                        projectiles[i].Damage = 2;
+                    }
+                    else
+                    {
+                        projectileTexture = Content.Load<Texture2D>("Images/weak Lazer");
+                        projectiles[i].Damage = 5;
+                    }
+
                     if (player.Health <= 20)
                     {
                         AddExplosion(player.Position);
                         projectileTexture = Content.Load<Texture2D>("Images/LaserRage");
-                        projectiles[i].Damage = 10;
-                        
+                        projectiles[i].Damage = 20;
                     }
+
+
+
                     
                 }
             }
@@ -378,17 +397,20 @@ namespace Shooter.Controller
 
                 
             }
+            if (player.Health >= 70)
+            {
+                playerMoveSpeed = 2.0f;
+            }
+            else
+            {
+                playerMoveSpeed = 8.0f;
+            }
 
             player.Position.X = MathHelper.Clamp(player.Position.X,
                 0, GraphicsDevice.Viewport.Width - player.Width);
             player.Position.Y = MathHelper.Clamp(player.Position.Y,
                 0, GraphicsDevice.Viewport.Height - player.Height);
-            bgLayer1.Update();
-            bgLayer2.Update();
-            UpdateEnemies(gameTime);
-            UpdateCollisioin();
-            UpdateProjectiles();
-            UpdateExplosions(gameTime);
+           
          
         }
         private void UpdateProjectiles()
@@ -411,46 +433,59 @@ namespace Shooter.Controller
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.SpringGreen);
-
-            // Start drawing
-            spriteBatch.Begin();
-
-            // Draw the moving background
-            spriteBatch.Draw(mainBackground, Vector2.Zero, Color.White);
-
-            bgLayer1.Draw(spriteBatch);
-
-            bgLayer2.Draw(spriteBatch);
-
-            for (int i = 0; i < enemies.Count; i++)
+            if (player.Health > 0)
             {
-                enemies[i].Draw(spriteBatch);
+                // Start drawing
+                spriteBatch.Begin();
+
+                // Draw the moving background
+                spriteBatch.Draw(mainBackground, Vector2.Zero, Color.White);
+
+                bgLayer1.Draw(spriteBatch);
+
+                bgLayer2.Draw(spriteBatch);
+
+                for (int i = 0; i < enemies.Count; i++)
+                {
+                    enemies[i].Draw(spriteBatch);
+                }
+                for (int i = 0; i < projectiles.Count; i++)
+                {
+                    projectiles[i].Draw(spriteBatch);
+                }
+                for (int i = 0; i < explosions.Count; i++)
+                {
+                    explosions[i].Draw(spriteBatch);
+                }
+
+
+                spriteBatch.DrawString(font, "score: " + score, new Vector2
+                    (GraphicsDevice.Viewport.TitleSafeArea.X, GraphicsDevice.Viewport.TitleSafeArea.Y), Color.White);
+                // Draw the player health
+                spriteBatch.DrawString(font, "health: " + player.Health, new Vector2
+                    (GraphicsDevice.Viewport.TitleSafeArea.X, GraphicsDevice.Viewport.TitleSafeArea.Y + 30), Color.White);
+
+                // Draw the Player
+                player.Draw(spriteBatch);
+
+                //Stop drawing
+                spriteBatch.End();
             }
-            for (int i = 0; i < projectiles.Count; i++)
+            else
             {
-                projectiles[i].Draw(spriteBatch);
+                spriteBatch.Begin();
+                spriteBatch.Draw(endMenu, Vector2.Zero, Color.White);
+
+                spriteBatch.DrawString(font, "score: " + score, new Vector2
+                    (GraphicsDevice.Viewport.TitleSafeArea.X, GraphicsDevice.Viewport.TitleSafeArea.Y), Color.Green);
+                // Draw the player health
+                
+                spriteBatch.End();
+                if(currentKeyboardState.IsKeyDown(Keys.Enter))
+                {
+                    this.Exit();
+                }
             }
-            for (int i = 0; i < explosions.Count; i++)
-            {
-                explosions[i].Draw(spriteBatch);
-            }
-            spriteBatch.DrawString(font, "score: " + score, new Vector2
-                (GraphicsDevice.Viewport.TitleSafeArea.X, GraphicsDevice.Viewport.TitleSafeArea.Y), Color.White);
-            // Draw the player health
-            spriteBatch.DrawString(font, "health: " + player.Health, new Vector2
-                (GraphicsDevice.Viewport.TitleSafeArea.X, GraphicsDevice.Viewport.TitleSafeArea.Y + 30), Color.White);
-
-            // Draw the Player
-            player.Draw(spriteBatch);
-            
-
-
-
-
-
-            //Stop drawing
-            spriteBatch.End();
             base.Draw(gameTime);
 
            
@@ -461,6 +496,22 @@ namespace Shooter.Controller
 
         
     }
-}
+    // protected override void EndDraw(GameTime gameTime)
+ //   {
+   //  spriteBatch.Begin();
+          
+            // Draw the moving background
+         //   spriteBatch.Draw(mainBackground, Vector2.Zero, Color.White);
+
+            //spriteBatch.DrawString(font, "score: " + score, new Vector2
+             //   (GraphicsDevice.Viewport.TitleSafeArea.X, GraphicsDevice.Viewport.TitleSafeArea.Y), Color.White);
+            // Draw the player health
+           // spriteBatch.DrawString(font, "health: " + player.Health, new Vector2
+            //    (GraphicsDevice.Viewport.TitleSafeArea.X, GraphicsDevice.Viewport.TitleSafeArea.Y + 30), Color.White);
+
+        
+
+    }
+
 
 

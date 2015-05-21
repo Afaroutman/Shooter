@@ -50,7 +50,7 @@ namespace Shooter.Model
             
             Active = true;
 
-            Damage = 2;
+            Damage = 5;
 
             projectileMoveSpeed = 20f;
            
