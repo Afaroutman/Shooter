@@ -29,3 +29,7 @@ C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\
 C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Images\laserstrip.xnb
 C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Images\LaserRage.xnb
 C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Images\weak lazer.xnb
+C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Sounds\GameOver.xnb
+C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Sounds\GameOver.wma
+C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Sounds\The Pretender.xnb
+C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Sounds\The Pretender.wma

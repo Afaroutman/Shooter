@@ -23,3 +23,7 @@ Content\Images\MegaLazer.xnb
 Content\Images\laserstrip.xnb
 Content\Images\LaserRage.xnb
 Content\Images\weak lazer.xnb
+Content\Sounds\GameOver.xnb
+Content\Sounds\GameOver.wma
+Content\Sounds\The Pretender.xnb
+Content\Sounds\The Pretender.wma

@@ -43,10 +43,12 @@ namespace Shooter.Controller
         SoundEffect laserSound;
         SoundEffect explosionSound;
         Song gameplayMusic;
+        Song endMusic;
+        Song Rage;
 
         int score;
 
-        SpriteFont font; 
+        SpriteFont font;
 
         // Parallaxing Layers
         ParallaxingBackground bgLayer1;
@@ -60,7 +62,7 @@ namespace Shooter.Controller
 
         Random random;
 
-        Texture2D megaLazerTexture;
+     //   Texture2D megaLazerTexture;
         Texture2D projectileTexture;
         List<Projectile> projectiles;
 
@@ -84,7 +86,7 @@ namespace Shooter.Controller
         {
             //Initialize the player class
             player = new Player();
-          
+
             playerMoveSpeed = 12.0f;
 
             bgLayer1 = new ParallaxingBackground();
@@ -92,23 +94,19 @@ namespace Shooter.Controller
             // Load the parallaxing background
             bgLayer1.Initialize(Content, "Images/bgLayer1", GraphicsDevice.Viewport.Width, -1);
             bgLayer2.Initialize(Content, "Images/bgLayer2", GraphicsDevice.Viewport.Width, -2);
-           
-            enemyTexture = Content.Load<Texture2D>("Images/mineAnimation");
-
-            explosionTexture = Content.Load<Texture2D>("Images/explosion");
-           
-
-            gameplayMusic = Content.Load<Song>("sounds/SkyFight");
-            laserSound = Content.Load<SoundEffect>("sounds/laserFire");
-            explosionSound = Content.Load<SoundEffect>("sounds/explosion");
-            PlayMusic(gameplayMusic);
-            font = Content.Load<SpriteFont>("Fonts/gameFont");
-
-            projectileTexture = Content.Load<Texture2D>("Images/laser");
-            endMenu = Content.Load<Texture2D>("Images/endMenu");
-          
-
-            mainBackground = Content.Load<Texture2D>("Images/mainbackground");
+    
+                enemyTexture = Content.Load<Texture2D>("Images/mineAnimation");
+                explosionTexture = Content.Load<Texture2D>("Images/explosion");
+                gameplayMusic = Content.Load<Song>("sounds/SkyFight");
+                laserSound = Content.Load<SoundEffect>("sounds/laserFire");
+                explosionSound = Content.Load<SoundEffect>("sounds/explosion");
+                PlayMusic(gameplayMusic);
+                font = Content.Load<SpriteFont>("Fonts/gameFont");
+                endMusic = Content.Load<Song>("Sounds/GameOver");
+                projectileTexture = Content.Load<Texture2D>("Images/laser");
+                endMenu = Content.Load<Texture2D>("Images/endMenu");
+                mainBackground = Content.Load<Texture2D>("Images/mainbackground");
+                Rage = Content.Load<Song>("Sounds/The Pretender");
 
             enemies = new List<Enemy>();
 
@@ -132,7 +130,24 @@ namespace Shooter.Controller
             base.Initialize();
 
         }
+        private void SongList()
+        {
 
+            if (player.Health <= 0)
+            {
+                endMusic = Content.Load<Song>("Sounds/GameOver");
+            }
+            else if (player.Health >= 20)
+            {
+                Rage = Content.Load<Song>("Sounds/The Pretender");
+            }
+            else
+            {
+                gameplayMusic = Content.Load<Song>("sounds/SkyFight");
+            }
+
+
+        }
         private void PlayMusic(Song song)
         {
             // Due to the way the MediaPlayer plays music,
@@ -190,7 +205,7 @@ namespace Shooter.Controller
             projectile.Initialize(GraphicsDevice.Viewport, projectileTexture, position);
             projectiles.Add(projectile);
         }
-       
+
         private void AddExplosion(Vector2 position)
         {
             Animation explosion = new Animation();
@@ -205,6 +220,8 @@ namespace Shooter.Controller
             {
                 this.Exit();
             }
+           
+
             previousGamePadState = currentGamePadState;
             previousKeyboardState = currentKeyboardState;
 
@@ -275,7 +292,7 @@ namespace Shooter.Controller
                         enemies[j].Health -= projectiles[i].Damage;
                         projectiles[i].Active = false;
                     }
-                   
+
                     if (player.Health >= 70)
                     {
                         projectileTexture = Content.Load<Texture2D>("Images/laser");
@@ -292,11 +309,8 @@ namespace Shooter.Controller
                         AddExplosion(player.Position);
                         projectileTexture = Content.Load<Texture2D>("Images/LaserRage");
                         projectiles[i].Damage = 20;
+                        
                     }
-
-
-
-                    
                 }
             }
         }
@@ -331,7 +345,7 @@ namespace Shooter.Controller
             for (int i = enemies.Count - 1; i >= 0; i--)
             {
                 enemies[i].Update(gameTime);
-               
+
                 if (enemies[i].Active == false)
                 {
                     if (enemies[i].Health <= 0)
@@ -395,8 +409,9 @@ namespace Shooter.Controller
                     laserSound.Play();
                 }
 
-                
+
             }
+            
             if (player.Health >= 70)
             {
                 playerMoveSpeed = 2.0f;
@@ -405,13 +420,14 @@ namespace Shooter.Controller
             {
                 playerMoveSpeed = 8.0f;
             }
+            
 
             player.Position.X = MathHelper.Clamp(player.Position.X,
                 0, GraphicsDevice.Viewport.Width - player.Width);
             player.Position.Y = MathHelper.Clamp(player.Position.Y,
                 0, GraphicsDevice.Viewport.Height - player.Height);
-           
-         
+
+
         }
         private void UpdateProjectiles()
         {
@@ -457,6 +473,7 @@ namespace Shooter.Controller
                 {
                     explosions[i].Draw(spriteBatch);
                 }
+                
 
 
                 spriteBatch.DrawString(font, "score: " + score, new Vector2
@@ -479,38 +496,26 @@ namespace Shooter.Controller
                 spriteBatch.DrawString(font, "score: " + score, new Vector2
                     (GraphicsDevice.Viewport.TitleSafeArea.X, GraphicsDevice.Viewport.TitleSafeArea.Y), Color.Green);
                 // Draw the player health
-                
+
                 spriteBatch.End();
-                if(currentKeyboardState.IsKeyDown(Keys.Enter))
+
+                
+
+                if (currentKeyboardState.IsKeyDown(Keys.Enter))
                 {
                     this.Exit();
                 }
             }
             base.Draw(gameTime);
 
-           
-
-            }
 
 
+        }
 
-        
+
+
+
     }
-    // protected override void EndDraw(GameTime gameTime)
- //   {
-   //  spriteBatch.Begin();
-          
-            // Draw the moving background
-         //   spriteBatch.Draw(mainBackground, Vector2.Zero, Color.White);
-
-            //spriteBatch.DrawString(font, "score: " + score, new Vector2
-             //   (GraphicsDevice.Viewport.TitleSafeArea.X, GraphicsDevice.Viewport.TitleSafeArea.Y), Color.White);
-            // Draw the player health
-           // spriteBatch.DrawString(font, "health: " + player.Health, new Vector2
-            //    (GraphicsDevice.Viewport.TitleSafeArea.X, GraphicsDevice.Viewport.TitleSafeArea.Y + 30), Color.White);
-
-        
-
     }
 
 

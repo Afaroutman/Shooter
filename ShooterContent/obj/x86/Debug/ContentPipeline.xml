@@ -202,6 +202,26 @@
       <Output>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Images\weak lazer.xnb</Output>
       <Time>2015-05-21T08:57:29.0146091-06:00</Time>
     </Item>
+    <Item>
+      <Source>Sounds\GameOver.mp3</Source>
+      <Name>Sounds\GameOver</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Sounds\GameOver.xnb</Output>
+      <Extra>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Sounds\GameOver.wma</Extra>
+      <Time>2015-05-26T07:25:02.959265-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\The Pretender.mp3</Source>
+      <Name>Sounds\The Pretender</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Sounds\The Pretender.xnb</Output>
+      <Extra>C:\Users\ahit0637\Documents\Visual Studio 2010\Projects\Shooter\Shooter\Shooter\bin\x86\Debug\Content\Sounds\The Pretender.wma</Extra>
+      <Time>2015-05-26T08:11:05.138439-06:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
